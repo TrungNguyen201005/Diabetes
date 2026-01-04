@@ -1,0 +1,335 @@
+CHƯƠNG 1: CƠ SỞ LÝ THUYẾT HỌC MÁY
+1.1 Pandas
+1.1.1 Giới thiệu về Pandas
+Pandas là một thư viện mã nguồn mở phổ biến trong Python, được xây dựng trên nền tảng NumPy, chuyên dùng để thao tác và phân tích dữ liệu. Với khả năng xử lý các loại dữ liệu đa dạng như chuỗi thời gian, bảng không đồng nhất và ma trận dữ liệu, Pandas mang lại trải nghiệm làm việc trực quan và linh hoạt cho người dung.
+Thư viện này cho phép import dữ liệu từ nhiều nguồn như CSV, cơ sở dữ liệu SQL, và các định dạng đặc biệt khác. Sau khi nhập dữ liệu, người dùng có thể thực hiện các thao tác như chọn lọc (subsetting), cắt nhỏ (slicing), lọc (filtering), hợp nhất (merging), nhóm (groupBy), sắp xếp (re-ordering), và tái cấu trúc (re-shaping) dữ liệu một cách dễ dàng. Pandas cũng hỗ trợ xử lý dữ liệu mất mát bằng cách loại bỏ hoặc thay thế bằng giá trị khác.
+Ngoài ra, Pandas tích hợp tốt với các thư viện như Matplotlib, SciPy và Scikit-Learn, giúp mở rộng khả năng phân tích và trực quan hóa. Với hiệu suất cao, Pandas có thể xử lý khối lượng dữ liệu lớn hiệu quả, là công cụ không thể thiếu cho các nhà phân tích dữ liệu.
+1.1.2 Cài đặt Pandas
+ Để cài đặt Pandas, bạn có thể sử dụng hai phương pháp chính: Anaconda và Pip
+Anaconda: là một nền tảng phổ biến cho khoa học dữ liệu và học máy, cung cấp một môi trường dễ sử dụng để quản lý các gói và môi trường ảo. Để cài đặt Pandas thông qua Anaconda, bạn có thể sử dụng lệnh sau: conda install pandas
+Pip: Pip là trình quản lý gói chuẩn cho Python. Nếu bạn không sử dụng Anaconda, bạn có thể cài đặt Pandas thông qua Pip bằng lệnh sau: pip install pandas
+Sau khi cài đặt, để sử dụng Pandas chúng ta cần khai báo: import pandas as pd. Cách viết ngắn gọn này là tiêu chuẩn phổ biến, giúp mã nguồn dễ đọc và tuân theo các quy ước trong cộng đồng Python. Dù có thể đặt tên khác, nhưng dùng pd là lựa chọn tối ưu và được khuyến khích dễ đọc và tuân theo các quy ước chung trong tài liệu và ví dụ.
+1.2  Numpy
+1.2.1 Giới thiệu về Numpy
+Numpy là thư viện cốt lõi của Python dành cho khoa học máy tính, hỗ trợ xử lý các mảng nhiều chiều với kích thước lớn. Thư viện này cung cấp các hàm tối ưu hóa để thao tác trên các mảng, giúp thực hiện các phép tính nhanh chóng và hiệu quả. NumPy đặc biệt hữu ích trong các bài toán liên quan đến đại số tuyến tính, xử lý tín hiệu, và tính toán ma trận, làm cho việc thao tác và phân tích dữ liệu số trở nên đơn giản và hiệu quả hơn
+1.2.2 Cài đặt Numpy
+Để cài đặt NumPy, bạn có thể sử dụng hai phương pháp chính: Anaconda và Pip
+Anaconda: là một nền tảng phổ biến cho khoa học dữ liệu và học máy, cung cấp một môi trường dễ sử dụng để quản lý các gói môi trường ảo, bạn có thể tải bằng lệnh sau: conda install numpy
+Pip: Pip là trình quản lý gói chuẩn cho Python, bạn có thể tải bằng lệnh sau: pip install numpy
+Sau khi cài đặt, cần khai báo thư viện NumPy để sử dụng trong mã nguồn Python. Thông thường, NumPy được khai báo gọn lại bằng lệnh import numpy as np
+1.3 Matplotlib
+1.3.1 Giới thiệu về Matplotlib
+Để hỗ trợ các suy luận thống kê, trực quan hóa dữ liệu là bước không thể thiếu, và Matplotlib là một công cụ phổ biến trong Python. Đây là thư viện vẽ đồ thị mạnh mẽ, đặc biệt hữu ích khi kết hợp với Python và NumPy. Trong Matplotlib, module Pyplot thường được sử dụng nhất, cung cấp giao diện thân thiện, tương tự MATLAB nhưng dựa trên Python và hoàn toàn mã nguồn mở. Matplotlib cho phép tạo ra nhiều loại biểu đồ như biểu đồ đường, biểu đồ thanh, biểu đồ phân tán và hơn thế nữa, giúp phân tích dữ liệu hiệu quả và trực quan. Với sự linh hoạt và khả năng tùy chỉnh cao, người dùng dễ dàng tạo các hình ảnh trực quan đáp ứng nhu cầu cụ thể của mình.
+1.3.2 Cài đặt Matplotlib
+Để cài đặt Matplotlib, bạn có thể sử dụng hai phương pháp chính: Anaconda và Pip.
+Anaconda: là một nền tảng phổ biến cho khoa học dữ liệu và học máy cung cấp một môi trường dễ sử dụng để quản lý các gói và môi trường ảo lệnh cài đặt qua Anaconda: canda install matplolib.
+Pip: Pip là trình quản lý gói chuẩn cho Python. Lệnh cài đặt qua Pip: pip install matplotlib.
+Sau khi cài đặt, bạn có thể bắt đầu sử dụng Matplotlib trong mã nguồn Python bằng cách khai báo: import matplotlib.pyplot as plt. Đây là cách viết tắt phổ biến, được cộng đồng Python sử dụng rộng rãi, giúp mã nguồn dễ đọc và tuân theo các quy ước chuẩn trong tài liệu và ví dụ.
+1.4 Random Forset
+Random Forest là một thuật toán học máy mạnh mẽ thuộc nhóm học máy giám sát (supervised learning) và thường được sử dụng cho các bài toán phân loại và hồi quy. Thuật toán này kết hợp nhiều cây quyết định (decision trees) để tạo thành một "rừng" cây, và kết quả cuối cùng được đưa ra dựa trên kết quả từ tất cả các cây trong rừng
+1.4.1 Cấu trúc của Random Forest
+Random Forest là một bộ phân loại học theo phương thức ensemble learning, tức là nó xây dựng nhiều mô hình đơn lẻ (các cây quyết định) và kết hợp chúng lại để đưa ra dự đoán chính xác hơn.
+Cây quyết định (Decision Trees): Mỗi cây quyết định trong Random Forest là một cây riêng biệt được xây dựng bằng cách sử dụng một tập con ngẫu nhiên của dữ liệu và các đặc trưng.
+Quy trình Ensemble: Sau khi các cây quyết định được xây dựng, kết quả của mỗi cây sẽ được lấy (dựa trên đa số phiếu bầu cho phân loại hoặc giá trị trung bình cho hồi quy) để đưa ra dự đoán cuối cùng.
+
+1.4.2 Cách thức hoạt động của Random Forest
+Tạo ra các cây quyết định:
+	Tạo ra một tập hợp các mẫu ngẫu nhiên từ tập huấn luyện bằng cách sử dụng Bootstrap sampling (hay còn gọi là sampling với thay thế).
+	Tại mỗi nút trong cây, thay vì thử tất cả các đặc trưng để chia, thuật toán chỉ chọn một tập con ngẫu nhiên của các đặc trưng để tạo sự đa dạng giữa các cây.
+Dự đoán từ mỗi cây:
+	Phân loại: mỗi cây đưa ra một dự đoán phân loại. Random Forest sẽ chọn kết quả dự đoán mà cây quyết định chiếm số phiếu bầu cao nhất.
+Hồi quy: kết quả dự đoán là giá trị trung bình của tất cả các cây trong rừng
+1.4.3 Ứng dụng của Random Forest
+Phân loại: ví dụ như phân loại email thành thư rác và không phải thư rác, phân loại khách hàng thành nhóm có thể mua và không thể mua, hoặc phân loại bệnh nhân có nguy cơ mắc bệnh hay không.
+Hồi quy: ví dụ như dự đoán giá trị của bất động sản, giá cổ phiếu, hay giá trị của các biến liên tục khác.
+Phân tích tầm quan trọng đặc trưng: Random Forest có thể được sử dụng để phân tích các yếu tố quan trọng trong tập dữ liệu, giúp xác định các đặc trưng có ảnh hưởng mạnh đến dự đoán.
+1.5 Logistic Regression
+Logistic Regression là một thuật toán học máy cơ bản và phổ biến thuộc nhóm học máy giám sát (supervised learning). Mặc dù có tên là "hồi quy", nhưng thuật toán này chủ yếu được sử dụng cho các bài toán phân loại nhị phân (binary classification), nơi kết quả dự đoán chỉ nằm trong hai trạng thái (ví dụ: Có bệnh hoặc Không có bệnh).
+1.5.1 Cấu trúc của Logistic Regression
+Logistic Regression hoạt động dựa trên việc thiết lập mối quan hệ giữa các biến độc lập (các chỉ số sức khỏe) và xác suất xảy ra của một biến phụ thuộc (khả năng mắc bệnh).
+	Hàm Tuyến tính: Thuật toán bắt đầu bằng cách tính tổng trọng số của các đặc trưng đầu vào (như BMI, Glucose, tuổi...).
+	Hàm Sigmod: Điểm khác biệt cốt lõi là việc đưa kết quả của hàm tuyến tính qua hàm Sigmoid (S-shape). Hàm này có nhiệm vụ nén mọi giá trị đầu vào vào khoảng từ 0 đến 1, đại diện cho mức xác suất.
+1.5.2 Cách thức hoạt động của Logistic Regression
+a)  Tính toán xác suất: 
+- Thuật toán gán cho mỗi đặc trưng đầu vào một trọng số ($w$) thể hiện mức độ ảnh hưởng của nó. Ví dụ, chỉ số Glucose thường có trọng số cao vì nó ảnh hưởng mạnh đến bệnh tiểu đường.
+- Hàm Sigmoid sẽ tính toán dựa trên các trọng số này để trả về một con số xác suất (ví dụ: 0.75 tương đương 75%).
+b)  Quyết định phân loại:
+- Một ngưỡng (thông thường là 0.5) được thiết lập để đưa ra kết luận cuối cùng.
+- Nếu xác suất >= 5 mô hình dự đoán là "Có nguy cơ".
+- Nếu xác suất < 5 mô hình dự đoán là "Bình thường". 
+1.5.3 Ứng dụng của Logistic Regression
+- Phân loại y khoa: Dự đoán khả năng mắc các bệnh mãn tính như tiểu đường, tim mạch dựa trên các chỉ số xét nghiệm lâm sàng.
+- Tín dụng ngân hàng: Đánh giá khả năng một khách hàng có thể trả nợ đúng hạn hay không.
+- Phân tích tác động: Giúp xác định các yếu tố nguy cơ hàng đầu (như BMI hay huyết áp) ảnh hưởng như thế nào đến khả năng mắc bệnh thông qua các hệ số hồi quy.
+1.5.4 Loss Funcion
+Hàm mất mát trong hồi quy tuyến tính là Mean Squared Error (MSE), tính toán trung bình bình phương sai số giữa các giá trị thực tế và giá trị dự đoán:
+
+
+
+1.5.5 Các loại Logistic Regression
+Single Logistic Regression (hồi huy Logistic đơn biến): Khi có chỉ một biến độc lập (feature), mô hình trở thành một đường thẳng trong không gian 2 chiều.
+Multiple Logistic Regression (hồi quy Logistic đa biến): Khi có nhiều biến độc lập, mô hình trở thành một siêu phẳng trong không gian n chiều
+1.6 KNN
+K-Nearest Neighbors (KNN) là một thuật toán học máy có giám sát, thuộc nhóm phương pháp dựa trên instance (instance-based learning), được sử dụng cho cả bài toán phân loại (classification) và hồi quy (regression).
+Ý tưởng cốt lõi của KNN là:
+“Một đối tượng mới sẽ có xu hướng giống với các đối tượng gần nó nhất trong không gian đặc trưng.”
+1.6.1 Cấu trúc của KNN
+K-Nearest Neighbors (KNN) là một mô hình học máy dựa trên khoảng cách, thuộc nhóm học có giám sát, được sử dụng phổ biến cho các bài toán phân loại và hồi quy. Khác với nhiều mô hình khác, KNN không xây dựng mô hình học rõ ràng trong quá trình huấn luyện, mà lưu trữ toàn bộ dữ liệu huấn luyện để sử dụng trực tiếp trong quá trình dự đoán.
+Cấu trúc của KNN bao gồm:
+Tập dữ liệu huấn luyện: chứa các mẫu dữ liệu đã biết nhãn
+Tham số K: số lượng điểm lân cận gần nhất được sử dụng để dự đoán
+Hàm đo khoảng cách: thường dùng khoảng cách Euclid, Manhattan hoặc Minkowski
+Cơ chế bỏ phiếu (voting): xác định nhãn dự đoán dựa trên đa số của K hàng xóm
+Do không có bước học tham số, KNN còn được gọi là mô hình lazy learning (học lười).
+1.6.2 Cách thức hoạt động của KNN
+Bước 1: Chuẩn hóa dữ liệu
+Do KNN sử dụng khoảng cách để so sánh các điểm dữ liệu, nên các đặc trưng cần được đưa về cùng một thang đo. Nếu không chuẩn hóa, các đặc trưng có giá trị lớn (như Glucose hoặc Insulin) sẽ chi phối kết quả tính khoảng cách, làm sai lệch quá trình dự đoán.
+Bước 2: Chọn số lượng hàng xóm K
+Tham số K xác định số lượng điểm dữ liệu lân cận được xem xét khi dự đoán:
+K nhỏ giúp mô hình nhạy với dữ liệu cục bộ nhưng dễ bị ảnh hưởng bởi nhiễu.
+K lớn giúp mô hình ổn định hơn nhưng có thể làm giảm khả năng phân biệt giữa các lớp.
+Việc lựa chọn K phù hợp có ảnh hưởng trực tiếp đến hiệu năng của mô hình.
+Bước 3: Tính khoảng cách
+Khi có một mẫu dữ liệu mới cần dự đoán, KNN sẽ tính khoảng cách từ mẫu đó đến tất cả các mẫu trong tập huấn luyện. Khoảng cách phổ biến nhất được sử dụng là khoảng cách Euclid, phản ánh mức độ gần nhau giữa các điểm dữ liệu trong không gian đặc trưng.
+Bước 4: Xác định K hàng xóm gần nhất
+Sau khi tính toán khoảng cách, các điểm dữ liệu trong tập huấn luyện được sắp xếp theo khoảng cách tăng dần. K điểm có khoảng cách nhỏ nhất được chọn làm K hàng xóm gần nhất của mẫu cần dự đoán.
+Bước 5: Dự đoán kết quả
+Đối với bài toán phân loại, nhãn của mẫu mới được xác định dựa trên nguyên tắc bỏ phiếu đa số từ K hàng xóm gần nhất.
+Đối với bài toán hồi quy, giá trị dự đoán được tính bằng trung bình (hoặc trung bình có trọng số) của các giá trị từ K hàng xóm.
+1.6.3 Ứng dụng của KNN
+KNN được sử dụng trong nhiều lĩnh vực khác nhau, bao gồm:
+	Nhận dạng mẫu: nhận dạng chữ viết tay, nhận dạng khuôn mặt
+	Hệ thống gợi ý: gợi ý sản phẩm hoặc người dùng tương tự
+	Phát hiện bất thường: phát hiện các điểm dữ liệu khác biệt
+	Y tế: hỗ trợ phân loại bệnh trong các tập dữ liệu nhỏ, mang tính tham khảo
+1.7 Naive Bayes
+Naive Bayes là một thuật toán học máy có giám sát, thuộc nhóm mô hình xác suất, dựa trên định lý Bayes để thực hiện phân loại.
+Ý tưởng cốt lõi của Naive Bayes là:
+Xác suất một mẫu dữ liệu thuộc về một lớp nào đó phụ thuộc vào xác suất xuất hiện của các đặc trưng trong lớp đó.
+Thuật toán được gọi là “naive” (ngây thơ) vì giả định rằng các đặc trưng là độc lập với nhau, điều này thường không hoàn toàn đúng trong thực tế, đặc biệt với dữ liệu y tế. Tuy nhiên, trong nhiều trường hợp, Naive Bayes vẫn cho kết quả khá tốt và ổn định.
+	Cấu trúc của mô hình Naive Bayes
+Cấu trúc của Naive Bayes bao gồm:
+Tập dữ liệu huấn luyện: gồm các mẫu dữ liệu và nhãn đã biết
+Xác suất tiên nghiệm (Prior probability): xác suất ban đầu của mỗi lớp
+Xác suất có điều kiện (Likelihood): xác suất xuất hiện của mỗi đặc trưng khi biết trước lớp
+Định lý Bayes: dùng để tính xác suất hậu nghiệm và đưa ra dự đoán
+Trong bài toán phân loại tiểu đường, các lớp thường là:
+Lớp 0: Không mắc bệnh
+Lớp 1: Mắc bệnh
+	Cách thức hoạt động của mô hình Naive Bayes
+Bước 1: Tính xác suất tiên nghiệm
+Naive Bayes trước hết tính xác suất xuất hiện của mỗi lớp trong tập huấn luyện, ví dụ xác suất một người mắc bệnh hoặc không mắc bệnh.
+Bước 2: Ước lượng phân phối của các đặc trưng
+Đối với mỗi đặc trưng và mỗi lớp, mô hình ước lượng xác suất có điều kiện:
+	Với Gaussian Naive Bayes (dùng trong đề tài), các đặc trưng liên tục được giả định tuân theo phân phối chuẩn (Gaussian).
+	Mô hình sẽ ước lượng trung bình và phương sai của từng đặc trưng cho mỗi lớp.
+Bước 3: Áp dụng định lý Bayes
+Khi có một mẫu dữ liệu mới, Naive Bayes tính xác suất hậu nghiệm cho từng lớp dựa trên công thức:
+P(y∣X)∝P(y)∏_(i=1)^n▒〖P(〗 x_i∣y)
+
+
+Trong đó:
+	P(y)là xác suất tiên nghiệm của lớp
+	P(x_i∣y)là xác suất có điều kiện của đặc trưng thứ i
+Bước 4: So sánh và đưa ra dự đoán
+Mô hình so sánh xác suất hậu nghiệm của các lớp và chọn lớp có xác suất lớn nhất làm kết quả dự đoán cho mẫu dữ liệu mới.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 2: DỮ LIỆU VÀ TIỀN XỬ LÝ
+2.1. Giới thiệu bộ dữ liệu
+Bộ dữ liệu được sử dụng trong đề tài là bộ dữ liệu y tế về bệnh tiểu đường type 2, thường được sử dụng rộng rãi trong các nghiên cứu về học máy và khai phá dữ liệu y sinh. Dữ liệu bao gồm thông tin sức khỏe và đặc điểm sinh học của nhiều bệnh nhân, đã được ẩn danh nhằm đảm bảo quyền riêng tư
+Bộ dữ liệu sử dụng là Pima Indians Diabetes, bao gồm 768 mẫu từ phụ nữ người Pima Indian (tuổi ≥21). Có 8 đặc trưng:
+	Pregnancies: Số lần mang thai.
+	Glucose: Nồng độ đường huyết (mg/dL).
+	BloodPressure: Huyết áp tâm trương (mm Hg).
+	SkinThickness: Độ dày da (mm).
+	Insulin: Nồng độ insulin (mu U/mL).
+	BMI: Chỉ số khối cơ thể (kg/m²).
+	DiabetesPedigreeFunction: Yếu tố di truyền tiểu đường.
+	Age: Tuổi (năm).
+Nhãn: Outcome (0/1). Nguồn: Từ Kaggle hoặc UCI Machine Learning Repository.
+ 
+Hình 2.1: Dữ liệu
+2.2.  Phân tích dữ liệu ban đầu
+Trong giai đoạn phân tích dữ liệu khám phá (Exploratory Data Analysis – EDA), các biểu đồ phân phối, biểu đồ hộp và biểu đồ phân tán được sử dụng nhằm hiểu rõ đặc điểm và cấu trúc của dữ liệu.
+Kết quả phân tích cho thấy tồn tại nhiều giá trị bằng 0 tại các cột như Glucose, BloodPressure, BMI, Insulin và SkinThickness. Trong thực tế y khoa, các giá trị này là không hợp lệ và cần được xử lý trước khi đưa vào mô hình.
+Phân phối độ tuổi của dữ liệu có xu hướng lệch trái, cho thấy phần lớn các mẫu dữ liệu thuộc nhóm người trẻ tuổi. Điều này có thể ảnh hưởng đến khả năng tổng quát hóa của mô hình khi áp dụng cho nhóm bệnh nhân lớn tuổi hơn.
+Ngoài ra, các biểu đồ phân phối cho thấy bệnh nhân mắc tiểu đường thường có chỉ số BMI và nồng độ Glucose cao hơn so với nhóm không mắc bệnh. Ma trận tương quan cũng chỉ ra rằng Glucose và BMI có mối tương quan mạnh với biến Outcome.
+2.3. Tiền xử lý dữ liệu
+Thay giá trị "0" không hợp lệ thành NaN ở các cột Glucose, BloodPressure, SkinThickness, Insulin, BMI.
+Điền giá trị thiếu bằng median để giảm ảnh hưởng ngoại lai.
+Chuẩn hóa đặc trưng số bằng StandardScaler để đưa về cùng thang đo.
+Chia dữ liệu: 80% huấn luyện, 20% kiểm tra với stratify để giữ tỷ lệ lớp.
+2.4. Trích chọn và xây dựng đặc trưng
+Bên cạnh các đặc trưng ban đầu, đề tài tiến hành xây dựng thêm các đặc trưng mới nhằm nâng cao khả năng học của mô hình. Cụ thể:
+Age_Group: phân nhóm độ tuổi thành các khoảng khác nhau.
+Risk_BMI: phân loại chỉ số BMI theo mức độ rủi ro sức khỏe.
+Glucose_Level: phân loại nồng độ glucose thành các mức bình thường, tiền tiểu đường và tiểu đường.
+Việc xây dựng đặc trưng giúp mô hình nắm bắt tốt hơn các mối quan hệ tiềm ẩn trong dữ liệu và cải thiện hiệu suất dự đoán.
+2.5 Làm sạch mô hình
+Xử lý giá trị không hợp lệ: Ở các cột như Glucose, Blood Pressure, Insulin… giá trị bằng 0 là không có ý nghĩa về mặt y khoa.  chuyển các giá trị này thành NaN rồi dùng median để điền vào.
+ 
+ 
+Hình 2.2 : Làm sạch mô hình
+
+
+2.6  FEATURE ENGINEERING
+Chức năng:Tạo thêm những feature có ý nghĩa hơn từ dữ liệu gốc, ví dụ:
+AgeGroup
+BMI Category
+Glucose Level
+Interaction feature: BMI * Glucose
+ 
+Hình 2.3: Tạo feature engineering
+
+
+CHƯƠNG 3: XÂY DỰNG VÀ HUẤN LUYỆN MÔ HÌNH
+3.1. Quy trình xây dựng mô hình
+Quy trình xây dựng mô hình trong đề tài được thực hiện theo các bước: chuẩn bị dữ liệu, lựa chọn mô hình phù hợp, huấn luyện mô hình trên tập huấn luyện, đánh giá hiệu năng trên tập kiểm thử và so sánh kết quả giữa các mô hình.
+Quy trình này đảm bảo tính khoa học, minh bạch và khả năng lặp lại của các thí nghiệm.
+3.2. Huấn luyện mô hình
+Bốn mô hình học máy gồm Logistic Regression, Naive Bayes, K-Nearest Neighbors (KNN) và Random Forest được lựa chọn và huấn luyện trên cùng một tập dữ liệu huấn luyện.
+Logistic Regression và Naive Bayes được huấn luyện với các tham số mặc định.
+KNN được huấn luyện với giá trị k phù hợp nhằm cân bằng giữa độ chính xác và khả năng tổng quát hóa.
+Random Forest được huấn luyện với nhiều cây quyết định nhằm tăng độ ổn định và giảm hiện tượng overfitting.
+3.3. Điều chỉnh siêu tham số
+Việc điều chỉnh siêu tham số đóng vai trò quan trọng trong việc tối ưu hiệu năng mô hình. Một số tham số quan trọng được điều chỉnh bao gồm:
+Số lượng láng giềng k trong mô hình KNN.
+Số lượng cây quyết định và độ sâu tối đa của cây trong Random Forest.
+Quá trình đánh giá được thực hiện thông qua Cross Validation nhằm đảm bảo kết quả thu được là ổn định và đáng tin cậy.
+3.4. Độ phức tạp và chi phí tính toán
+Logistic Regression và Naive Bayes có độ phức tạp thấp, thời gian huấn luyện nhanh và phù hợp với dữ liệu vừa và nhỏ. Random Forest có chi phí tính toán cao hơn do sử dụng nhiều cây quyết định, tuy nhiên mang lại độ chính xác và độ ổn định tốt hơn. KNN có thời gian dự đoán tăng khi kích thước dữ liệu lớn do phải tính khoảng cách với toàn bộ tập huấn luyện.
+3.4  Logistic Regression
+ 
+Hình 3.1 : Huấn luyện logistic regression
+Logistic Regression được huấn luyện bằng cách tối ưu hàm mất mát log-loss, thông qua việc điều chỉnh các trọng số sao cho xác suất dự đoán gần nhất với nhãn thực tế. Trong quá trình huấn luyện, mô hình học được mối quan hệ tuyến tính giữa các đặc trưng đầu vào và xác suất mắc bệnh tiểu đường.
+Do Logistic Regression nhạy cảm với thang đo dữ liệu, các đặc trưng đã được chuẩn hóa trước khi huấn luyện. Quá trình huấn luyện diễn ra nhanh và ổn định, cho kết quả dự đoán có khả năng giải thích cao thông qua các hệ số của mô hình.
+
+3.5  Naive Bayes
+ 
+Hình 3.2 : Huấn luyện Naive Bayes
+Naive Bayes được huấn luyện dựa trên việc ước lượng các tham số xác suất từ dữ liệu huấn luyện. Với Gaussian Naive Bayes, mỗi đặc trưng liên tục được giả định tuân theo phân phối chuẩn, và mô hình ước lượng trung bình và phương sai của từng đặc trưng cho mỗi lớp.
+Quá trình huấn luyện của Naive Bayes diễn ra rất nhanh do không cần tối ưu tham số phức tạp. Mô hình tập trung vào việc tối đa hóa xác suất hậu nghiệm để đưa ra dự đoán.
+
+3.6  Random Forest
+ 
+Hình 3.3: Huấn luyện Random Forest
+Random Forest được huấn luyện bằng cách xây dựng nhiều cây quyết định độc lập từ các tập con ngẫu nhiên của dữ liệu huấn luyện và các đặc trưng. Mỗi cây được huấn luyện riêng biệt và đưa ra dự đoán, sau đó kết quả cuối cùng được xác định thông qua cơ chế bỏ phiếu đa số.
+Quá trình huấn luyện Random Forest có thời gian lâu hơn so với các mô hình khác, nhưng đổi lại mô hình có khả năng:
+	Học được các mối quan hệ phi tuyến
+	Giảm hiện tượng overfitting
+	Ít bị ảnh hưởng bởi nhiễu và dữ liệu ngoại lai
+
+
+3.7 KNN
+ 
+Hình 3.4: Huấn luyện KNN
+Khác với các mô hình trên, KNN không thực sự có quá trình huấn luyện theo nghĩa truyền thống. Mô hình lưu trữ toàn bộ dữ liệu huấn luyện và chỉ thực hiện tính toán khi cần dự đoán.
+Trước khi áp dụng KNN, dữ liệu được chuẩn hóa để đảm bảo việc tính khoảng cách chính xác. Khi dự đoán, KNN tìm ra K hàng xóm gần nhất trong tập huấn luyện và xác định nhãn dựa trên đa số phiếu.
+
+
+
+CHƯƠNG 4 : ĐÁNH GIÁ VÀ KẾT LUẬN
+4.1 Đánh giá kết quả mô hình Logistic Regression
+ 
+Hình 4.1 : Kết quả mô hình Logistic Regression
+Logistic Regression là mô hình phân loại tuyến tính phổ biến trong các bài toán y sinh nhờ tính đơn giản và khả năng giải thích cao. Trong đề tài này, Logistic Regression cho kết quả dự đoán ở mức khá, với độ chính xác và các chỉ số Precision, Recall, F1-score ở mức trung bình so với các mô hình khác.
+Ưu điểm lớn nhất của Logistic Regression là khả năng giải thích rõ ràng ảnh hưởng của từng đặc trưng đến nguy cơ mắc bệnh. Các hệ số của mô hình cho biết khi một yếu tố như Glucose, BMI hay tuổi tăng thì xác suất mắc bệnh thay đổi như thế nào. Điều này rất có ý nghĩa trong nghiên cứu y học và hỗ trợ bác sĩ hiểu được các yếu tố nguy cơ.
+Tuy nhiên, do giả định mối quan hệ tuyến tính giữa đặc trưng và kết quả, Logistic Regression gặp hạn chế khi dữ liệu có mối quan hệ phức tạp hoặc phi tuyến. Vì vậy, hiệu năng của mô hình này không phải là cao nhất trong bài toán.
+
+4.2 Đánh giá kết quả mô hình Naive Bayes
+ 
+Hình 4.2 : Kết quả mô hình Naive Bayes
+Naive Bayes là mô hình xác suất dựa trên định lý Bayes với giả định các đặc trưng độc lập với nhau. Trong thực tế, giả định này không hoàn toàn đúng với dữ liệu y tế, tuy nhiên mô hình vẫn cho kết quả khá tốt trong bài toán này.
+Kết quả thực nghiệm cho thấy Naive Bayes đạt Recall cao nhất trong các mô hình. Điều này có nghĩa là mô hình có khả năng phát hiện được phần lớn các trường hợp mắc bệnh, hạn chế việc bỏ sót bệnh nhân. Đây là một ưu điểm rất quan trọng trong lĩnh vực y tế, đặc biệt là trong các hệ thống sàng lọc ban đầu.
+Nhược điểm của Naive Bayes là độ chính xác tổng thể và Precision không cao bằng Random Forest, do mô hình có xu hướng dự đoán “có bệnh” nhiều hơn, dẫn đến số ca dương tính giả tăng.
+
+4.3  Đánh giá kết quả mô hình  Random Forest
+ 
+Hình 4.3 : Kết quả mô hình Random Forest
+Random Forest là mô hình học máy mạnh mẽ dựa trên tập hợp nhiều cây quyết định. Nhờ khả năng học các mối quan hệ phi tuyến và giảm hiện tượng overfitting, Random Forest cho hiệu năng tốt nhất trong đề tài.
+Kết quả cho thấy Random Forest đạt Accuracy, F1-score và Recall cao, đồng thời cân bằng tốt giữa việc phát hiện bệnh và hạn chế dự đoán sai. Mô hình này ít bị ảnh hưởng bởi dữ liệu nhiễu và outlier, rất phù hợp với dữ liệu y tế thực tế.
+Tuy nhiên, nhược điểm của Random Forest là khó giải thích trực quan, do mô hình là sự kết hợp của nhiều cây quyết định. Điều này khiến việc diễn giải kết quả cho bác sĩ hoặc người không chuyên trở nên khó khăn hơn so với Logistic Regression.
+
+4.4 Đánh giá kết quả mô hình KNN
+ 
+Hình 4.4 : Kết quả mô hình  KNN
+KNN là mô hình dựa trên khoảng cách giữa các điểm dữ liệu, hoạt động theo nguyên lý “gần thì giống”. Trong đề tài này, KNN cho kết quả dự đoán ở mức thấp hơn so với các mô hình còn lại.
+Mô hình này rất nhạy cảm với nhiễu, outlier và phụ thuộc mạnh vào việc chuẩn hóa dữ liệu. Ngoài ra, khi số lượng dữ liệu tăng, thời gian dự đoán của KNN trở nên chậm, khiến mô hình không phù hợp để triển khai trong thực tế y tế.
+4.5 So sánh các mô hình và thảo luận
+ 
+Hình 4.5 Bảng so sánh hiệu năng
+Bảng so sánh hiệu năng được xây dựng nhằm đánh giá và đối chiếu khả năng dự đoán của bốn mô hình học máy gồm Logistic Regression, Naive Bayes, Random Forest và KNN dựa trên các chỉ số: Accuracy, Precision, Recall và F1-score. Đây là các chỉ số phổ biến và phù hợp cho bài toán phân loại nhị phân trong lĩnh vực y tế.
+1. Accuracy 
+Accuracy thể hiện tỷ lệ dự đoán đúng trên toàn bộ tập dữ liệu kiểm tra. Kết quả cho thấy Random Forest đạt Accuracy cao nhất, chứng tỏ mô hình này có khả năng phân biệt tốt giữa hai nhóm có bệnh và không có bệnh. Logistic Regression và KNN có Accuracy ở mức trung bình, trong khi Naive Bayes thường có Accuracy thấp hơn do mô hình có xu hướng dự đoán dương tính nhiều hơn.
+Tuy nhiên, trong bối cảnh y tế, Accuracy không phải là chỉ số quan trọng nhất, bởi một mô hình có Accuracy cao vẫn có thể bỏ sót nhiều bệnh nhân nếu dự đoán lệch về lớp “không bệnh”.
+ 2. Precision 
+Precision phản ánh trong số những người được mô hình dự đoán là có bệnh, thì bao nhiêu người thực sự mắc bệnh. Chỉ số này đặc biệt quan trọng khi muốn hạn chế chẩn đoán nhầm.
+Kết quả cho thấy Random Forest và Logistic Regression thường có Precision cao hơn Naive Bayes. Điều này cho thấy hai mô hình này ít tạo ra dương tính giả hơn. Ngược lại, Naive Bayes có Precision thấp hơn do mô hình ưu tiên dự đoán “có bệnh” để không bỏ sót bệnh nhân.
+ 3. Recall 
+Recall thể hiện khả năng phát hiện đúng các bệnh nhân thực sự mắc bệnh. Trong bảng kết quả, Naive Bayes đạt Recall cao nhất, tiếp theo là Random Forest. Điều này có nghĩa là Naive Bayes ít bỏ sót bệnh nhân hơn các mô hình còn lại.
+Trong lĩnh vực y tế, Recall có ý nghĩa rất quan trọng, bởi việc bỏ sót một bệnh nhân tiểu đường có thể dẫn đến hậu quả nghiêm trọng. Do đó, một mô hình có Recall cao thường được ưu tiên trong các hệ thống sàng lọc bệnh ban đầu.
+ 4. F1-score 
+F1-score là trung bình điều hòa giữa Precision và Recall, phản ánh sự cân bằng giữa việc phát hiện bệnh và hạn chế dự đoán sai. Trong bảng so sánh, Random Forest đạt F1-score cao nhất, cho thấy mô hình này có sự cân bằng tốt giữa Precision và Recall.
+Điều này chứng tỏ Random Forest không chỉ phát hiện được nhiều bệnh nhân mà còn hạn chế được số lượng chẩn đoán nhầm, phù hợp cho các hệ thống hỗ trợ quyết định trong y tế.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KẾT LUẬN
+Trong đề tài này, nhóm đã nghiên cứu và xây dựng các mô hình học máy nhằm dự đoán nguy cơ mắc bệnh tiểu đường dựa trên các chỉ số y tế cơ bản như số lần mang thai, Glucose, huyết áp, độ dày da, Insulin, BMI, chỉ số di truyền (DPF) và tuổi. Đây là bài toán phân loại nhị phân có giám sát, mang ý nghĩa thực tiễn cao trong lĩnh vực y tế, đặc biệt là hỗ trợ sàng lọc và phát hiện sớm bệnh tiểu đường.
+Trước hết, dữ liệu được phân tích khám phá (EDA) thông qua nhiều loại biểu đồ khác nhau như Histogram, Scatter plot, Violin plot, KDE plot và ma trận tương quan. Kết quả phân tích cho thấy Glucose là đặc trưng có mối tương quan mạnh nhất với bệnh tiểu đường, bên cạnh đó BMI, tuổi và yếu tố di truyền cũng có ảnh hưởng đáng kể. Việc phân tích dữ liệu giúp hiểu rõ bản chất dữ liệu và định hướng cho các bước xử lý tiếp theo.
+Tiếp theo, dữ liệu được tiền xử lý cẩn thận, bao gồm làm sạch dữ liệu, xử lý các giá trị không hợp lệ, chuẩn hóa dữ liệu và tách tập huấn luyện – kiểm tra. Các kỹ thuật tiền xử lý đóng vai trò quan trọng trong việc nâng cao hiệu năng và độ ổn định của mô hình, đặc biệt đối với các mô hình nhạy cảm với thang đo và nhiễu như Logistic Regression và KNN.
+Trong giai đoạn xây dựng và huấn luyện mô hình, bốn mô hình học máy phổ biến gồm Logistic Regression, Naive Bayes, Random Forest và KNN đã được triển khai và đánh giá. Mỗi mô hình đại diện cho một hướng tiếp cận khác nhau, từ mô hình tuyến tính, xác suất đến mô hình ensemble và mô hình dựa trên khoảng cách.
+Kết quả so sánh hiệu năng cho thấy:
+Logistic Regression có khả năng giải thích tốt, giúp phân tích mức độ ảnh hưởng của từng đặc trưng nhưng hiệu năng dự đoán chỉ ở mức trung bình.
+Naive Bayes đạt Recall cao nhất, phù hợp cho các bài toán sàng lọc y tế, nơi việc bỏ sót bệnh nhân là không mong muốn.
+Random Forest cho hiệu năng tổng thể tốt nhất với Accuracy và F1-score cao, đồng thời cân bằng tốt giữa Precision và Recall.
+KNN cho kết quả thấp hơn các mô hình còn lại và nhạy cảm với nhiễu, do đó chủ yếu mang tính tham khảo.
+Từ các kết quả thực nghiệm, có thể kết luận rằng Random Forest là mô hình phù hợp nhất cho bài toán dự đoán nguy cơ mắc bệnh tiểu đường trong phạm vi đề tài, nhờ khả năng học các mối quan hệ phức tạp và cho kết quả ổn định. Trong khi đó, Naive Bayes đóng vai trò quan trọng trong việc phát hiện sớm bệnh nhân, còn Logistic Regression hỗ trợ tốt cho việc giải thích và phân tích yếu tố nguy cơ.
+Tuy nhiên, đề tài vẫn còn một số hạn chế như kích thước tập dữ liệu chưa lớn và chưa khai thác các kỹ thuật nâng cao như tối ưu siêu tham số, cân bằng dữ liệu nâng cao hay mô hình học sâu. Trong tương lai, có thể mở rộng nghiên cứu bằng cách sử dụng dữ liệu thực tế lớn hơn, áp dụng các kỹ thuật cải tiến và triển khai mô hình thành hệ thống hỗ trợ quyết định trong y tế.
+
+
+
+
+
+
+
+
+
+
+
+
+
+TÀI LIỆU THAM KHẢO
+[1]. namanhnt.. GitHub Repository. Truy cập từ: 
+https://github.com/TrungNguyen201005/Diabetes 
+[2]. Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5-32. 
+[3]. Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+
+
